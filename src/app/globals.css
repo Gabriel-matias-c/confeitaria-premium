@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #fff8f3;
+  --color-choc: #4b2e24;
+  --color-choc-light: #6b4433;
+  --color-caramel: #a66a3f;
+  --color-gold: #d4af37;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-choc: var(--color-choc);
+  --color-choc-light: var(--color-choc-light);
+  --color-caramel: var(--color-caramel);
+  --color-gold: var(--color-gold);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-poppins);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-choc);
+  font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-choc);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-caramel);
+  border-radius: 999px;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(120deg, var(--color-caramel), var(--color-gold), var(--color-caramel));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 248, 243, 0.55);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.glass-dark {
+  background: rgba(75, 46, 36, 0.55);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.shadow-soft {
+  box-shadow: 0 20px 60px -15px rgba(75, 46, 36, 0.25);
+}
+
+.shadow-gold {
+  box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.45);
+}
